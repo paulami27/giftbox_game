@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Box Game</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: rgb(226, 233, 246);
+    }
+
+    .container {
+        margin: auto;
+        background-color: aliceblue;
+        width: 480px;
+        margin-top: 40px;
+        border-radius: 30px;
+        height: 530px;
+        padding: 50px;
+        text-align: center;
+        box-shadow: 1px 3px 6px black;
+
+
+    }
+
+
+    h4 {
+        color: rgba(60, 62, 62, 0.87);
+    }
+    .gift-container{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .gift {
+        background-color: rgba(244, 209, 164, 0.127);
+        margin-top: 20px;
+        width: 120px;
+        padding: 30px;
+        border-radius: 9px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+   .gift img {
+        width: 60px;
+    }
+
+    button{
+        margin-top: 20px;
+        width: 80px;
+        border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+        margin-left: -10px;
+        
+    }
+    #red{
+        background-color: rgb(198, 5, 5);
+        border: 1px solid wheat;
+        padding: 10px;
+        
+    }
+
+    #blue{
+      background-color: rgb(7, 93, 180);
+        border: 1px solid wheat;
+        padding: 8px;
+
+    }
+
+    #green{
+
+          background-color: rgb(9, 135, 74);
+        border: 1px solid wheat;
+        padding: 8px;
+    }
+
+    #result{
+        background-color: rgba(232, 246, 142, 0.444);
+        margin-top: 20px;
+        height: 90px;
+        font-size: 2.3rem;
+        border-radius: 9px;
+        border: 1px solid rgba(0, 0, 0, 0.17);
+    }
+    p{
+        margin-top: 17px;
+    }
+     #play{
+        margin-top: 20px;
+        width: 100px;
+        height: 40px;
+        background-color: rgb(58, 58, 249);
+        border: none;
+        border-radius: 9px;
+        color: aliceblue;
+        
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>🎁Gift Box Game🎁</h2>
+        <h4>Choose a gift box and see what's inside!</h4>
+
+        <div class="gift-container">
+
+
+
+            <div class="gift">
+
+                <img src="https://pics.clipartpng.com/Red_Gift_PNG_Clipart-1010.png">
+                <button id = "red"  onclick="openGift('Red Gift')">Red Gift</button>
+            </div>
+
+            <div class="gift">
+                 
+                <img src="https://gallery.yopriceville.com/downloadfullsize/send/12047">
+                <button id="blue"   onclick="openGift('Blue Gift')">Blue Gift</button>
+            </div>
+
+            <div class="gift">
+
+            <img src="https://gallery.yopriceville.com/downloadfullsize/send/30564">
+            <button id="green"  onclick="openGift('Green Gift')">Green Gift</button>
+
+          </div>
+
+            
+       </div>
+
+       <p>Your Gift is below down 👇</p>
+
+        <div id="result"></div>
+        <button id="play"   onclick="resetButton()">🗘 Play Again</button>
+
+        <script>
+
+            function openGift(gift) {
+                if (gift == "Red Gift") {
+                    document.getElementById("result").innerHTML = "🍕"
+                } else if (gift == "Blue Gift") {
+                    document.getElementById("result").innerHTML = "🦜👻☀️"
+                } else {
+                    document.getElementById("result").innerHTML = "Better luck next time !"
+                }
+            }
+
+
+            function resetButton(){
+                document.getElementById("result").innerHTML=""
+            }
+
+   </script>
+
+
+
+
+
+
+
+
+   
+</body>
+
+</html>
